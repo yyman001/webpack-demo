@@ -22,3 +22,10 @@ module.exports = {
     }
 }
 ```
+### 2.2 使用npm脚本命令
+有时候一直使用那么长的命令，确实不方便
+打开`package.json`,在`scripts`中添加一个新的命令
+```json
+"build":"webpack --config webpack.config.js"
+```
+运行`npm run build`
