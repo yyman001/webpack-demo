@@ -98,13 +98,25 @@ module: {
 总结结果`rules` 和 `loaders` 同等，`loader` 和 `use` 同等，测试是可以编译的。写法大同小异，一般使用`写法1`即可或者`写法2`
 
 #### 3.1处理js脚本并编译到ES5
-```js
+添加`.babelrc`文件
+```json
 {
-    test: /\.js$/,
-    loader: 'babel-loader',
+    "presets": [
+        "es2015"
+    ]
+}
+```
+```js
+//# 参考 webpack.es6.js
+{
+    test: /\.(jsx|js)$/,
+    use: {
+        loader: "babel-loader"
+    },
     //#忽略 node_modules 目录
     exclude: /node_modules/
 }
+
 ```
 
 #### 3.2 图片处理
