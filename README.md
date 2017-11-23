@@ -95,4 +95,68 @@ module: {
     ]
 }
 ```
-总结结果rules和loaders 同等， loader 和 use 同等，测试是可以编译的。写法大同小异，一般使用写法1即可或者写法2
+总结结果`rules` 和 `loaders` 同等，`loader` 和 `use` 同等，测试是可以编译的。写法大同小异，一般使用`写法1`即可或者`写法2`
+
+#### 3.1处理js脚本并编译到ES5
+```js
+{
+    test: /\.js$/,
+    loader: 'babel-loader',
+    //#忽略 node_modules 目录
+    exclude: /node_modules/
+}
+```
+
+#### 3.2 图片处理
+```js
+//# file-loader,html-loader
+{
+    test: /\.(png|svg|jpg|gif)$/,
+    use: [
+    'file-loader'
+    ]
+}
+```
+#### 3.3 处理字体
+```js
+//# url-loader
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader'
+        ]
+      }
+```
+#### 3.4 sass/less 预编译样式处理
+[sass-loader配置](https://github.com/webpack-contrib/sass-loader)
+[less-loader配置](https://github.com/webpack-contrib/less-loader)
+样式文件还在`js`哦，因为是在 `main.js` 中通过`import './index.scss';` 样式的，如果要把css单独抽取出来，需要安装`插件`
+```js
+//#sass => npm i -D sass-loader node-sass
+// LESS
+    {
+      test: /\.less$/,
+        use: [
+                    {
+                        loader: "style-loader"
+                    }, {
+                        loader: "css-loader"
+                    }, {
+                        loader: "less-loader"
+                    }
+            ]
+    }
+//#less  => npm i -D less-loader
+    {
+      test: /\.scss$/,
+      use: [
+            {
+                loader: "style-loader"
+            }, {
+                loader: "css-loader"
+            }, {
+                loader: "sass-loader"
+            }
+        ]
+    }
+```

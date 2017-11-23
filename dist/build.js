@@ -70,14 +70,15 @@
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mod__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index_css__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__index_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index_scss__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__index_scss___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__index_scss__);
 //编译入口主文件
 
 document.getElementsByTagName('h1')[0].innerHTML = __WEBPACK_IMPORTED_MODULE_0__mod__["a" /* default */];
 console.log(__WEBPACK_IMPORTED_MODULE_0__mod__["a" /* default */])
 
 //引入css
+// import './index.css';
 
 
 /***/ }),
@@ -110,8 +111,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!./node_modules/css-loader/index.js!./index.css", function() {
-			var newContent = require("!!./node_modules/css-loader/index.js!./index.css");
+		module.hot.accept("!!./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./index.scss", function() {
+			var newContent = require("!!./node_modules/css-loader/index.js!./node_modules/sass-loader/lib/loader.js!./index.scss");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -129,7 +130,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, "@charset \"UTF-8\";\r\nh1{\r\n    background-color: rgb(255, 0, 140);\r\n}", ""]);
+exports.push([module.i, "body h1 {\n  font-size: 40px;\n  background-color: #2ec76e; }\n", ""]);
 
 // exports
 
