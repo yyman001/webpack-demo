@@ -71,7 +71,6 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__mod__ = __webpack_require__(1);
 //编译入口主文件
-// var name = require('./mod');
 
 document.getElementsByTagName('h1')[0].innerHTML = __WEBPACK_IMPORTED_MODULE_0__mod__["a" /* default */];
 console.log(__WEBPACK_IMPORTED_MODULE_0__mod__["a" /* default */])
