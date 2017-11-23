@@ -73,6 +73,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //编译入口主文件
 // var name = require('./mod');
 
+document.getElementsByTagName('h1')[0].innerHTML = __WEBPACK_IMPORTED_MODULE_0__mod__["a" /* default */];
 console.log(__WEBPACK_IMPORTED_MODULE_0__mod__["a" /* default */])
 
 /***/ }),
@@ -81,9 +82,6 @@ console.log(__WEBPACK_IMPORTED_MODULE_0__mod__["a" /* default */])
 
 "use strict";
 //需要编译的模块
-// module.exports = {
-//     'title':'base webpack'
-// }
 let name = 'heoll webpack'
 /* harmony default export */ __webpack_exports__["a"] = (name);
 
