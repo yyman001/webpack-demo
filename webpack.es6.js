@@ -1,4 +1,5 @@
 const path = require('path');
+const WebpackMonitor = require('webpack-monitor');
 module.exports = {
     entry: './main.js',
     output: {
@@ -15,5 +16,13 @@ module.exports = {
                exclude: /node_modules/
            }
         ]
-    }
+    },
+    plugins: [
+        new WebpackMonitor({
+          capture: true, // -> default 'true'
+          target: '../monitor/myStatsStore.json', // default -> '../monitor/stats.json'
+          launch: true, // -> default 'false'
+          port: 3030, // default -> 8081
+        }),
+      ]
 }

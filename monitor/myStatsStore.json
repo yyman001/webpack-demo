@@ -1,0 +1,40 @@
+[
+  {
+    "timeStamp": 1512041189262,
+    "time": 254,
+    "hash": "b60ff610f7f3bace5547",
+    "errors": [],
+    "size": 3282,
+    "assets": [
+      {
+        "name": "build.js",
+        "chunks": [
+          0
+        ],
+        "size": 3282,
+        "miniSize": 2898,
+        "minified": false
+      }
+    ],
+    "chunks": [
+      {
+        "size": 703,
+        "files": [
+          "build.js"
+        ],
+        "modules": [
+          {
+            "name": "./main.js",
+            "size": 562,
+            "id": 0
+          },
+          {
+            "name": "./mod.js",
+            "size": 141,
+            "id": 1
+          }
+        ]
+      }
+    ]
+  }
+]
