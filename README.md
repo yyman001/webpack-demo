@@ -172,3 +172,32 @@ module: {
         ]
     }
 ```
+#### 3.5 处理css兼容性
+```js
+添加插件 `cnpm i postcss-loader autoprefixer -D`
+//由于css-loader处理文件导入的方式，因此加载器postcss-loader不能与CSS模块一起使用。 为了使它们正常工作，可以添加css-loader的importLoaders选项
+{
+    test: /\.css$/,
+    use: [
+        {
+            loader: "style-loader"
+        },
+        {
+            loader: "css-loader",
+            options: { importLoaders: 1 }
+        },
+        { 
+            loader: "postcss-loader"
+        }
+    ]
+}
+//新建postcss.config.js，并制定编译方式
+//postcss.config.js
+module.exports = {
+    plugins: [
+        require("autoprefixer")()
+        //设置给最近5个版本的浏览器加前缀
+        // require("autoprefixer")({browsers:'last 5 version'})
+    ]
+}
+```
