@@ -1,16 +1,14 @@
 //编译入口主文件
 import name from './mod';
-//import { setTimeout } from 'core-js/library/web/timers';
 let es6 = {
     name:'babel es6 to es5',
     doIt(){
         setTimeout(()=>{
-            console.log('go')
+            console.log('es6->es5')
         })
     }
 }
 document.getElementsByTagName('h1')[0].innerHTML = name;
 console.log(name)
+es6.doIt();
 
-//引入css
-import './index.css';

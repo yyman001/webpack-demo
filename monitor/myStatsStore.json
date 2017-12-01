@@ -36,5 +36,164 @@
         ]
       }
     ]
+  },
+  {
+    "timeStamp": 1512118750261,
+    "time": 1403,
+    "hash": "b1e0005fb0b6c30db3d6",
+    "errors": [
+      "./index.css\nModule parse failed: Unexpected character '@' (1:0)\nYou may need an appropriate loader to handle this file type.\n| @charset \"UTF-8\";\r\n| body{\r\n|     background-color: #2ec76e;\r\n @ ./main.js 7:0-22"
+    ],
+    "size": 3518,
+    "assets": [
+      {
+        "name": "build.js",
+        "chunks": [
+          0
+        ],
+        "size": 3518,
+        "miniSize": 3120,
+        "minified": false
+      }
+    ],
+    "chunks": [
+      {
+        "size": 883,
+        "files": [
+          "build.js"
+        ],
+        "modules": [
+          {
+            "name": "./main.js",
+            "size": 537,
+            "id": 0
+          },
+          {
+            "name": "./mod.js",
+            "size": 141,
+            "id": 1
+          },
+          {
+            "name": "./index.css",
+            "size": 205,
+            "id": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timeStamp": 1512118879342,
+    "time": 281,
+    "hash": "f213b87594acc9d923f5",
+    "errors": [],
+    "size": 3223,
+    "assets": [
+      {
+        "name": "build.js",
+        "chunks": [
+          0
+        ],
+        "size": 3223,
+        "miniSize": 2840,
+        "minified": false
+      }
+    ],
+    "chunks": [
+      {
+        "size": 644,
+        "files": [
+          "build.js"
+        ],
+        "modules": [
+          {
+            "name": "./main.js",
+            "size": 503,
+            "id": 0
+          },
+          {
+            "name": "./mod.js",
+            "size": 141,
+            "id": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timeStamp": 1512118955656,
+    "time": 270,
+    "hash": "49a877805c308dfdabd5",
+    "errors": [],
+    "size": 3170,
+    "assets": [
+      {
+        "name": "build.js",
+        "chunks": [
+          0
+        ],
+        "size": 3170,
+        "miniSize": 2787,
+        "minified": false
+      }
+    ],
+    "chunks": [
+      {
+        "size": 591,
+        "files": [
+          "build.js"
+        ],
+        "modules": [
+          {
+            "name": "./main.js",
+            "size": 450,
+            "id": 0
+          },
+          {
+            "name": "./mod.js",
+            "size": 141,
+            "id": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "timeStamp": 1512119026941,
+    "time": 280,
+    "hash": "9663443080b64a5bb04d",
+    "errors": [],
+    "size": 3182,
+    "assets": [
+      {
+        "name": "build.js",
+        "chunks": [
+          0
+        ],
+        "size": 3182,
+        "miniSize": 2798,
+        "minified": false
+      }
+    ],
+    "chunks": [
+      {
+        "size": 603,
+        "files": [
+          "build.js"
+        ],
+        "modules": [
+          {
+            "name": "./main.js",
+            "size": 462,
+            "id": 0
+          },
+          {
+            "name": "./mod.js",
+            "size": 141,
+            "id": 1
+          }
+        ]
+      }
+    ]
   }
 ]

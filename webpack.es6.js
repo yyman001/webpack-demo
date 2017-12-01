@@ -1,5 +1,6 @@
 const path = require('path');
 const WebpackMonitor = require('webpack-monitor');
+const es6LoaderConfig = require('./loader/es6.loader.config')
 module.exports = {
     entry: './main.js',
     output: {
@@ -8,13 +9,14 @@ module.exports = {
     },
     module: {
         rules: [
-            {
-               test: /\.(jsx|js)$/,
-               use: {
-                   loader: "babel-loader"
-               },
-               exclude: /node_modules/
-           }
+	        es6LoaderConfig
+           //  {
+           //     test: /\.(jsx|js)$/,
+           //     use: {
+           //         loader: "babel-loader"
+           //     },
+           //     exclude: /node_modules/
+           // }
         ]
     },
     plugins: [

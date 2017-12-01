@@ -1,4 +1,7 @@
 @charset "UTF-8";
+body{
+    background-color: #2ec76e;
+}
 h1{
     background-color: rgb(255, 0, 140);
 }
