@@ -1,10 +1,12 @@
 @charset "UTF-8";
 body{
-    background-color: #2ec76e;
+    background-color: #29c728;
 }
 h1{
-    background-color: rgb(255, 0, 140);
+    background-color: #000;
+    color: #1d20cc;
 }
 .flex{
     display: flex;
+    align-content: space-between;
 }

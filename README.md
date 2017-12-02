@@ -201,3 +201,31 @@ module.exports = {
     ]
 }
 ```
+####3.6 使用webpack-dev-server插件修改文件实现自动刷新
+注意：首先devServer的publicPath路径是指向内存生产的路径，不在物理硬盘上.
+```cmd
+npm install --save-dev webpack-dev-server
+devServer: {
+        publicPath: '/', //注意这里，相应看html的引用路径为如果写 /test/,那么引用就是 /test/+ 资源文件名
+        contentBase: './',
+        historyApiFallback: true,
+        open: true,
+        inline: true
+    },
+//命令
+es6": "webpack-dev-server --config webpack.es6.js --inline --open"
+```
+脚本引入
+```html
+<body>
+    <h1>...</h1>
+    <!--
+    build.js的路径是相当于publicPath，
+    之前不能更新是我一直写了webpack watch 出来的 dist/build.js 中的路径，真是大错特错了。
+    -->
+    <script src="build.js"></script>
+</body>
+```
+另外如果引入的css文件报错 import './index.css'
+试试require('./index.css')引入方式
+现在终于修改文件可以实现自动刷新了

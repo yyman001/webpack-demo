@@ -1,6 +1,7 @@
 const path = require('path');
-const WebpackMonitor = require('webpack-monitor');
-const es6LoaderConfig = require('./loader/es6.loader.config')
+// const WebpackMonitor = require('webpack-monitor');
+const CssLoaderConfig = require('./loader/css.loader.config');
+const es6LoaderConfig = require('./loader/es6.loader.config');
 module.exports = {
     entry: './main.js',
     output: {
@@ -9,22 +10,23 @@ module.exports = {
     },
     module: {
         rules: [
+	        CssLoaderConfig,
 	        es6LoaderConfig
-           //  {
-           //     test: /\.(jsx|js)$/,
-           //     use: {
-           //         loader: "babel-loader"
-           //     },
-           //     exclude: /node_modules/
-           // }
         ]
     },
+	devServer: {
+		publicPath: '/',
+		contentBase: './',
+		historyApiFallback: true,
+		open: true,
+		inline: true
+	},
     plugins: [
-        new WebpackMonitor({
-          capture: true, // -> default 'true'
-          target: '../monitor/myStatsStore.json', // default -> '../monitor/stats.json'
-          launch: true, // -> default 'false'
-          port: 3030, // default -> 8081
-        }),
+        // new WebpackMonitor({
+        //   capture: true, // -> default 'true'
+        //   target: '../monitor/myStatsStore.json', // default -> '../monitor/stats.json'
+        //   launch: true, // -> default 'false'
+        //   port: 3030, // default -> 8081
+        // }),
       ]
 }
